@@ -56,7 +56,7 @@ const resolvers = {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     {_id: context.user._id},
-                    { $pull: {books: {bookId=bookId}}},
+                    { $pull: {books: {bookId: bookId}}},
                     { new: true}
                 );
 
