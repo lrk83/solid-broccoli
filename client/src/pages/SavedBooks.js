@@ -8,12 +8,6 @@ import Auth from '../utils/auth';
 
 const SavedBooks = () => {
   const { data: userData } = useQuery(GET_ME);
-  
-  // use this to determine if `useEffect()` hook needs to run again
-  /*const userDataLength = Object.keys(userData).length;*/
-
-  /*const {loading, data } = useQuery(GET_ME);*/
-  /*const userData = data?.thoughts || [];*/
 
   const [deleteBook, { error }]=useMutation(REMOVE_BOOK);
 
@@ -31,11 +25,6 @@ const SavedBooks = () => {
     }
   };
 
-  // if data isn't here yet, say so
-  /*if (!userDataLength) {
-    return <h2>LOADING...</h2>;
-  }*/
-
   return (
     <>
       <Jumbotron fluid className='text-light bg-dark'>
@@ -43,6 +32,7 @@ const SavedBooks = () => {
           <h1>Viewing saved books!</h1>
         </Container>
       </Jumbotron>
+      {userData? (
       <Container>
         <h2>
           {userData.savedBooks.length
@@ -67,6 +57,7 @@ const SavedBooks = () => {
           })}
         </CardColumns>
       </Container>
+      ): null}
     </>
   );
 };
