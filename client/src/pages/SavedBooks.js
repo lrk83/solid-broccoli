@@ -7,7 +7,11 @@ import { REMOVE_BOOK } from '../utils/mutation';
 import Auth from '../utils/auth';
 
 const SavedBooks = () => {
-  const { data: userData } = useQuery(GET_ME);
+  /*const { data: userData } = useQuery(GET_ME);*/
+
+  const {data} = useQuery(GET_ME);
+
+  const userData = data?.me || {};
 
   const [deleteBook, { error }]=useMutation(REMOVE_BOOK);
 
@@ -17,7 +21,7 @@ const SavedBooks = () => {
 
     try {
       deleteBook({
-        variables: { bookId }
+        variables: { bookId: bookId }
       });
       
     } catch (err) {
@@ -32,7 +36,7 @@ const SavedBooks = () => {
           <h1>Viewing saved books!</h1>
         </Container>
       </Jumbotron>
-      {userData? (
+      {userData.savedBooks ? (
       <Container>
         <h2>
           {userData.savedBooks.length
