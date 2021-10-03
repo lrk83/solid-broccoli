@@ -12,4 +12,8 @@ When you load the site you are presented with an input field to search for books
 
 ## Screenshots
 
-![About Me](https://github.com/lrk83/react-portfolio/blob/main/src/assets/screenshots/Screen%20Shot%202021-09-26%20at%209.58.51%20PM.png)
+![Search Bar](https://github.com/lrk83/solid-broccoli/blob/main/Screenshots/Screen%20Shot%202021-10-03%20at%2010.56.24%20AM.png)
+![Search Results](https://github.com/lrk83/solid-broccoli/blob/main/Screenshots/Screen%20Shot%202021-10-03%20at%2010.56.39%20AM.png)
+![Login/Signup](https://github.com/lrk83/solid-broccoli/blob/main/Screenshots/Screen%20Shot%202021-10-03%20at%2010.56.49%20AM.png)
+![Saved Books](https://github.com/lrk83/solid-broccoli/blob/main/Screenshots/Screen%20Shot%202021-10-03%20at%2010.57.16%20AM.png)
+![Delete Saved Books](https://github.com/lrk83/solid-broccoli/blob/main/Screenshots/Screen%20Shot%202021-10-03%20at%2010.57.33%20AM.png)
